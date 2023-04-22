@@ -1,3 +1,24 @@
 # Environments
 .env
 flisol_env/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.coveragerc
+
+# Django stuff:
+*.log
+db.sqlite3
+
+# others
+.sample
+__pycache__/
