@@ -18,6 +18,7 @@ class Book(models.Model):
         on_delete=models.PROTECT,
         related_name="books",
     )
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
