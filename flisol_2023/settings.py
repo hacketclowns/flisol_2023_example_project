@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "apps.stores",
     # Thrid party
     "rest_framework",
+    "django_filters",
 ]
 
 MIDDLEWARE = [

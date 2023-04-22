@@ -8,8 +8,17 @@ class BookType(models.TextChoices):
     adults = "adults"
 
 
+class BookQuerySet(models.QuerySet):
+    def family_friendly(self):
+        return self.filter(
+            type__in=[BookType.adventure, BookType.animated]
+        )
+
+
 class Book(models.Model):
     Type = BookType
+    objects = BookQuerySet.as_manager()
+
     title = models.CharField(max_length=256)
     type = models.CharField(max_length=9, choices=Type.choices)
     notes = models.TextField(blank=True)
